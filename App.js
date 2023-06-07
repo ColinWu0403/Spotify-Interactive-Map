@@ -1,21 +1,43 @@
-import React from 'react'
-import { View, StyleSheet } from 'react-native'
-import CurrentWeather from './src/screens/CurrentWeather'
-import UpcomingWeather from './src/screens/UpcomingWeather'
-import City from './src/screens/City'
+import React, { useState, useEffect } from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { ActivityIndicator, View, StyleSheet } from 'react-native'
+import Tabs from './src/components/Tabs'
+import * as Location from 'expo-location'
+import { WEATHER_API_KEY } from '@env'
+import { useGetWeather } from './src/hooks/useGetWeather'
+import ErrorItem from './src/components/ErrorItem'
+
+// The app
 
 const App = () => {
+  const [loading, error, weather] = useGetWeather()
+
+  console.log(loading, error, weather)
+
+  if (weather && weather.list) {
+    return (
+      <NavigationContainer>
+        <Tabs weather={weather} />
+      </NavigationContainer>
+    )
+  }
+
   return (
     <View style={styles.container}>
-      <CurrentWeather />
-      {/* <UpcomingWeather /> */}
-      {/* <City /> */}
+      {loading ? (
+        <ActivityIndicator size={'large'} color={'green'} />
+      ) : (
+        <ErrorItem />
+      )}
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1 }
+  container: {
+    justifyContent: 'center',
+    flex: 1
+  }
 })
 
 export default App
