@@ -9,6 +9,8 @@ import {
 } from 'react-native'
 import ListItem from '../components/ListItem'
 
+// This shits broke >:|
+
 const UpcomingWeather = ({ weatherData }) => {
   const renderItem = ({ item }) => (
     <ListItem

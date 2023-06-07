@@ -7,6 +7,8 @@ import { WEATHER_API_KEY } from '@env'
 import { useGetWeather } from './src/hooks/useGetWeather'
 import ErrorItem from './src/components/ErrorItem'
 
+// The app
+
 const App = () => {
   const [loading, error, weather] = useGetWeather()
 

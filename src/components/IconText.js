@@ -2,6 +2,8 @@ import React from 'react'
 import { SafeAreaView, Text, StyleSheet, StatusBar, View } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 
+// Component for Icon Text
+
 const IconText = (props) => {
   const { iconName, iconColor, bodyText, bodyTextStyles } = props
   const { container, textTheme } = styles

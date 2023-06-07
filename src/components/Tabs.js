@@ -5,6 +5,8 @@ import City from '../screens/City'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Feather } from '@expo/vector-icons'
 
+// Contains the navigation for the tabs
+
 const Tab = createBottomTabNavigator()
 
 const Tabs = ({ weather }) => {

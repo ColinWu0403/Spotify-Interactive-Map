@@ -1,6 +1,8 @@
 import React from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 
+// Component for Row Text
+
 const RowText = (props) => {
   const {
     messageOne,

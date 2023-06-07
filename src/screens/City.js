@@ -11,6 +11,8 @@ import { Feather } from '@expo/vector-icons'
 import IconText from '../components/IconText'
 import moment from 'moment'
 
+// Shows the current city with the sunrise and sunset time
+
 const City = ({ weatherData }) => {
   const {
     container,

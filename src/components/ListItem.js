@@ -4,6 +4,8 @@ import { Feather } from '@expo/vector-icons'
 import { WeatherType } from '../utilities/WeatherType'
 import moment from 'moment/moment'
 
+// Component Item List
+
 const ListItem = (props) => {
   const { dt_txt, min, max, condition } = props
   const { item, date, temp } = styles
