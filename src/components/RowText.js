@@ -1,6 +1,7 @@
 import React from 'react'
-import { Text, View } from 'react-native'
-import { Feather } from '@expo/vector-icons'
+import { Text, View, StyleSheet } from 'react-native'
+
+// Component for Row Text
 
 const RowText = (props) => {
   const {
@@ -10,12 +11,20 @@ const RowText = (props) => {
     messageOneStyles,
     messageTwoStyles
   } = props
+
   return (
     <View style={containerStyles}>
-      <Text style={messageOneStyles}>{messageOne}</Text>
-      <Text style={messageTwoStyles}>{messageTwo}</Text>
+      <Text style={styles.messStyle}>{messageOne}</Text>
+      <Text style={styles.messStyle}>{messageTwo}</Text>
     </View>
   )
 }
 
+const styles = StyleSheet.create({
+  messStyle: {
+    fontSize: 20,
+    color: '#fff',
+    marginTop: 10
+  }
+})
 export default RowText
