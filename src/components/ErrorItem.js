@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   errorMessage: {
     fontSize: 30,
     color: 'white',
-    marginHorizontal: 10,
+    marginHorizontal: 9,
     textAlign: 'center'
   }
 })
