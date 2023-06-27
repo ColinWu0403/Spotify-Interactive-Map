@@ -7,3 +7,4 @@
 ### GOAL: Publish the app to the App Store, Google Play, and a web domain
 
 ### Timeframe: Mid July
+https://www.youtube.com/watch?v=dPw5vCXhrmc
